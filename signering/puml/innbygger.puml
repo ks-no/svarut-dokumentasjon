@@ -19,6 +19,8 @@ Deactivate Digipost
 Svarut --> Innbygger : Viser status på signeringsforespørselen
 Deactivate Innbygger
 Svarut -> Fagsystem : Sender signert dokument i retur
+Activate Fagsystem
 Fagsystem --> Svarut:
+Deactivate Fagsystem
 Deactivate Svarut
 @enduml
