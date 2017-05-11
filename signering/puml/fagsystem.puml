@@ -1,0 +1,13 @@
+@startuml
+participant Fagsystem
+participant Svarut
+participant SDP as "Altinn/SDP"
+actor Innbygger
+ Fagsystem -> Svarut : Sender forsendelse med signeringsoppdrag
+ Activate Svarut
+  Svarut --> Fagsystem :
+  Svarut -> SDP : Sender melding til Altinn eller SDP
+  SDP --> Svarut:
+ Deactivate Svarut
+ SDP -> Innbygger : Sender e-post og SMS
+@enduml
