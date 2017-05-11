@@ -1,0 +1,24 @@
+@startuml
+actor Innbygger
+participant Digipost
+participant SDP as "Altinn/SDP"
+participant Svarut
+participant Fagsystem
+Innbygger -> SDP : Logger inn og trykker på signeringslenke
+Activate Innbygger
+Activate SDP
+SDP -> Svarut : Validerer signeringsoppdraget
+Deactivate SDP
+Activate Svarut
+Svarut -> Digipost : Lager signeringsoppdrag
+Activate Digipost
+Digipost -> Innbygger: Viser signeringsforespørsel
+Innbygger -> Digipost : Signerer dokumentet
+Digipost --> Svarut : Sender signert dokument i retur
+Deactivate Digipost
+Svarut --> Innbygger : Viser status på signeringsforespørselen
+Deactivate Innbygger
+Svarut -> Fagsystem : Sender signert dokument i retur
+Fagsystem --> Svarut:
+Deactivate Svarut
+@enduml
