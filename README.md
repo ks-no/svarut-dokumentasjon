@@ -1,1 +1,1 @@
-[Se wiki for dokumentasjon](https://github.com/ks-no/svarut-dokumentasjon/wiki)
+Dokumentasjon finnes på [developers.fiks.ks.no](https://developers.fiks.ks.no/tjenester/svarut/).
